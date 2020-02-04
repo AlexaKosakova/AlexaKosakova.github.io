@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Проверка</title>
+    <link rel="stylesheet" href="minesweeper.css">
+</head>
+<body>
+<div class="bg">
+    <div class="playing-area">
+        <div class="menu">
+            <select id = "fieldSize">
+                <option value="0">easy</option>
+                <option value="1">medium</option>
+                <option value="2">hard</option>
+            </select>
+            <div class="timer"></div>
+            <div class="mines-left"></div>
+            <div class="hints">
+                <div class="hint"></div>
+                <div class="hint"></div>
+                <div class="hint"></div>
+            </div>
+            <div class="restart"></div>
+            <div class="new-game"></div>
+        </div>
+        <table id = "table" cellspacing="0"></table>
+        
+    </div>
+</div>
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+.bg{
+    background-image: url("bg.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+}
+td{
+    width: 20px;
+    height: 20px;
+}
+.cell-closed{
+    background-color: yellowgreen;
+    border: 1px solid darkgreen;
+}
+.cell-opened{
+    border: 1px dotted aquamarine;
+    background-color: aquamarine;
+}
+.flag{
+    background-color: red;
+}
+.playing-area{
+    margin: auto;
+    border: solid 2px aqua;
+    box-sizing: border-box;
+}
+.easy{
+    width: 240px;
+}
+.medium{
+    width: 432px;
+}
+.hard{
+    width: 576px;
+}
+.menu{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+#table{
+    margin: auto;
+}
+.exploded{
+    background-image: url("exploded.png");
+    background-size: cover;
+    background-color: brown;
+}
+.wrong-move{
+    background-size: cover;
+    background-image: url("exploded.png");
+    background-color: red;
+}
