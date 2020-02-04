@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title> color </title>
+    <!--link rel="stylesheet" type="text/css" href="Color.css"/-->
+    <script src="Color.js"></script>
+</head>
+
+<body onload="loadPage()">
+        <p>
+            <label for="size">Size:</label>
+            <select id="size" name="size">
+                <option value="1px">1px</option>
+                <option selected value="2px">2px</option>
+                <option value="3px">3px</option>
+                <option value="4px">4px</option>
+            </select>
+        </p>
+        <p>
+            <label for="time">Time:</label>
+            <select id="time" name="time">
+                <option selected value="100">100ms</option>
+                <option value="200">200ms</option>
+                <option value="300">300ms</option>
+                <option value="400">400ms</option>
+                <option value="500">500ms</option>
+            </select>
+        </p>
+        <input type="button" value="start" onclick="startTimer()">
+        <input type="button" value="stop"  onclick="stopTimer()">
+        <br/>
+        <br/>
+        <table id="board" cellspacing="0" cellpadding="0" border="0">
+        </table>
+</body>
+</html>
