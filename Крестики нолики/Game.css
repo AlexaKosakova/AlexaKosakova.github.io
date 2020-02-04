@@ -1,0 +1,30 @@
+.actions {
+  text-align: center;
+}
+
+.container {
+  margin: 50px auto;
+  width: 400px;
+  font-size: 30px;
+}
+#table {
+  font-size: 100px;
+}
+.cell {
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  height: 120px;
+  width: 120px;
+  text-align: center;
+}
+.cell:hover {
+  border-color: red;
+  cursor: pointer;
+}
+.player1::after {
+  content: "x";
+ }
+.player2::after {
+  content: "o";
+}
