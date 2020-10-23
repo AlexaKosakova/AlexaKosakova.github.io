@@ -1,0 +1,28 @@
+<head>
+    <!-- Plotly.js -->
+    <meta charset="UTF-8">
+    <script src="Newton.js"></script>
+    <style>
+        .b1 {
+            background: black;
+            color: rgb(255, 255, 255);
+            font-size: 15pt;
+        }
+
+        .p {
+            text-align: center;
+            font-size: 15pt;
+        }
+    </style>
+</head>
+
+<body onload="loadPage()">
+    <div width="100%" class="p">
+        Колличество итераций:<input type="number" size="5" id="iter" min="1" max="150" value="15"><br>
+        Дождитесь прогрузки <br>
+        <button class="b1" onclick="generate()">Поменять цвета</button><br><br>
+        <canvas width="1000" height="500" id="display"></canvas><br><br>
+    </div>
+</body>
+
+</html>

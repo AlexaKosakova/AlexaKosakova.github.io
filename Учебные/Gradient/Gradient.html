@@ -1,0 +1,23 @@
+<head>
+    <!-- Plotly.js -->
+    <meta charset="UTF-8">
+    <script src="Gradient.js"></script>
+    <style>
+        .b1 {
+            background: rgb(0, 255, 0);
+            color: rgb(1, 40, 1);
+            font-size: 12pt;
+        }
+    </style>
+</head>
+
+<body onload="loadPage()">
+    Нажмите на любую точку или введите значения x и y <br> <br>
+    <canvas id="grad" width="640" height="480"> </canvas> <br> <br>
+    Введите точку начала (x,y) <br> <br>
+    Точка x: <input type text id="x_"> <br> <br>
+    Точка y: <input type text id="y_"> <br> <br>
+    <button class="b1" id="minimum"> Найти минимум </button> <br> <br>
+</body>
+
+</html>

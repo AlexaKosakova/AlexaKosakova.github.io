@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Сортировка </title>
+    <script src="Sort.js"></script>
+    <style>
+        .b1 {
+            background: rgb(131, 131, 184);
+            color: rgb(0, 3, 48);
+            font-size: 12pt;
+        }
+        .b2 {
+            background: rgb(194, 2, 2);
+            color: rgb(233, 233, 233);
+            font-size: 12pt;
+        }
+        .b3 {
+            background: rgb(3, 116, 3);
+            color: rgb(233, 233, 233);
+            font-size: 12pt;
+        }
+    </style>
+</head>
+
+<body onload="loadPage()">
+    <div id="set"> </div>
+    <div class="menu">
+        <select id = "TypeOfSort">
+            <option class="b1" value="4" selected> Выберите тип сортировки </option>
+            <option value="1.1">Сортировка пузырьком</option>
+            <option value="1.2">Сортировка вставками</option>
+            <option value="1.3">Сортировка посредством выбора</option>
+            <option value="2">Быстрая сортировка</option>
+            <option value="3">Пирамидальная сортировка</option>
+        </select>    
+</div>
+    <button class="b1" id="ss"> Случайный набор </button>
+    <button class="b1" id="cl"> Очистить список </button><br> <br><br>
+    <button class="b1" id="sor"> Сортировать </button><br> <br><br>
+</body>
+
+</html>

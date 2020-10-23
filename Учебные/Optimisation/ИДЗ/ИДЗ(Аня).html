@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Plotly.js -->
+    <meta charset="UTF-8">
+    <script src="ИДЗ(Аня).js"></script>
+    
+</head>
+
+<body>
+    Введите функцию используя: E, PI, abs(), acos(), acosh(), asin(), asinh(), atan(), atanh(), ceil(), cos(), cosh(), exp(), floor(), log(), log10(), log2(), max(), min(), pow(), round(), sign(), sin(), sinh(), sqrt(), tan(), tanh(), trunc()<br> <br>
+    <input type="text" id="fun" value="1-cos(x)*cos(y)"><br> <br>
+    Введите масштаб <input type="number" id="size" value="5"><br> <br>
+    Введите x(начальная точка) <input type="number" id="x00" value="1"> <input type="number" id="x01" value="-1"><br> <br>
+    Введите t(шаг) <input type="number" id="t" value="0.1"><br> <br>
+    Введите коэфициент сжатия <input type="number" id="k" value="0.5"><br> <br>
+    Введите M(кол-во точек на каждой итерации) <input type="number" id="m" value="10"><br> <br>
+    Введите R(минимальная величина шага) <input type="number" id="r" value="0.1"><br> <br>
+    Введите n(число итераций) <input type="number" id="n" value="30"><br> <br>
+    <input type="button" value="Выполнить" onclick="calculate()"> <br> <br>
+    Минимум значения: <div id="result1"></div><br> <br>
+   Минимум функции: <div id="result2"></div><br> <br>
+    <canvas id="func" width="400" height="400"> </canvas> <br> <br>
+
+</body>
+
+</html>

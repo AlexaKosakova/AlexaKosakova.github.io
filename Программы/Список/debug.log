@@ -1,0 +1,7 @@
+[0206/175108.470:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0206/175108.471:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0206/175108.471:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1016/175219.674:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1016/175219.674:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1016/175219.674:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1016/175219.804:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
