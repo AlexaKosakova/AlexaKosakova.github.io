@@ -15,9 +15,7 @@ function calculate() {
         return eval(func);
     }
     for (i = a; i < b; i = i + 0.01) {
-        console.log("i", i, f(i));
-        if (f(i) != f(i)) { //проверка isNaN 
-            console.log("зашел")
+        if (Object.is(NaN, f(i))) { //проверка isNaN 
             document.getElementById("result").innerHTML = "Эта функция не подходит для вычисления минимума этим методом";
             return;
         }
@@ -39,16 +37,13 @@ function calculate() {
         return f1;
     }
 
-    function MaxL(fun, a, b) {
-        m = diff(fun, a)
-        console.log("m", m)
+      function MaxL(fun, a, b) {
+        m = diff(fun, a);
         for (i = a; i < b; i = i + 0.01) {
-            console.log("diff", diff(fun, i));
             if (diff(fun, i) > m) {
                 m = diff(fun, i)
             }
             if (Math.abs(diff(fun, i)) > 1000) {
-                console.log("ООШИИИЮБББКААААААА")
                 document.getElementById("result").innerHTML = "Эта функция не подходит для вычисления минимума этим методом";
                 return undefined;
             }
@@ -59,88 +54,69 @@ function calculate() {
     }
 
     L = MaxL(f, a, b);
+
     if (L == undefined) {
         return;
     }
-    console.log("L", L)
-
 
     function min() {
         console.log("Зашел в минимум")
         var t = [];
         var xMain = 1 / (2 * L) * (f(a) - f(b) + L * (a + b));
-        
         var pMain = 1 / 2 * (f(a) + f(b) + L * (a - b));
-        if(xMain<a||xMain>b||Object.is(NaN, xMain)) {
-            xMain = (b - a)/2;
+        if (xMain < a || xMain > b || Object.is(NaN, xMain)) {
+            xMain = (b - a) / 2;
             pMain = f(xMain);
         }
         list.push([xMain, pMain])
-        //console.log(xMain, pMain);
         while (true) {
             t = 0;
             for (i = 0; i < list.length; i++) {
-                //console.log("i", i)
                 console.log("Проходим по всем точкам, i, xMain, pMain ", i, list[i][0], list[i][1])
                 if ((list[i][1]) < (list[t][1])) {
                     t = i;
-                    //console.log("t", t);
                 }
             }
-            //console.log("Минимум после прохождения всех точек", t, list[t][0], list[t][1])
 
 
             while (true) {
                 var k = 0;
-                console.log("после поиска минимума t, x, p", t, list[t][0], list[t][1]);
                 pMain = list[t][1];
                 xMain = list[t][0];
-                //console.log("list", i, t, list);
                 var del = 1 / (2 * L) * (f(xMain) - pMain);
                 var x1 = xMain - del;
                 var x2 = xMain + del;
                 p = 1 / 2 * (f(xMain) + pMain)
-                if ((x1 < a || x1 > b ||Object.is(NaN, x1)) && (x2 < a || x2 > b||Object.is(NaN, x2))) {
+                if ((x1 < a || x1 > b || Object.is(NaN, x1)) && (x2 < a || x2 > b || Object.is(NaN, x2))) {
                     list.splice(t, 1);
-                } else if ((x1 < a || x1 > b||Object.is(NaN, x1)) && x2 > a && x2 < b) {
+                } else if ((x1 < a || x1 > b || Object.is(NaN, x1)) && x2 > a && x2 < b) {
                     list.splice(t, 1, [x2, p]);
-                } else if ((x2 < a || x2 > b||Object.is(NaN, x2)) && x1 > a && x1 < b) {
+                } else if ((x2 < a || x2 > b || Object.is(NaN, x2)) && x1 > a && x1 < b) {
                     list.splice(t, 1, [x1, p]);
                 } else {
                     list.splice(t, 1, [x1, p], [x2, p]);
                 }
-                console.log("x", x1, x2, p);
-
                 for (i = 0; i < list.length; i++) {
                     if ((list[i][1]) === (pMain)) {
                         t = i;
                         k++;
                     }
-
                 }
-                console.log("k", k);
                 if (k == 0) {
                     break;
                 }
                 if (Math.abs(2 * L * del) < eps) {
                     break;
                 }
-
-                console.log(Math.abs(2 * L * del), 2 * L * del, eps, 2 * L * del < eps);
-
             }
             if (Math.abs(2 * L * del) < eps) {
                 break;
             }
 
         }
-        console.log("вышел из while")
         document.getElementById("result").innerHTML = "Минимум в точке: " + " " + xMain;
         return [xMain, pMain];
     }
-    console.log("list=", list);
-    console.log("min=", min());
-
     var trace0 = {
         x: [],
         y: [],

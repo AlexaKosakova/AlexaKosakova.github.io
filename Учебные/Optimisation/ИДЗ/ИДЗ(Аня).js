@@ -125,11 +125,10 @@ function calculate() {
         x_fill = width * (size + xMin-x0[0][0]) / (2*size);
         y_fill = width * (size - yMin+x0[0][1]) / (2*size);
         ctx.fillRect(x_fill, y_fill, 4, 4);
-
+        document.getElementById("result2").innerHTML = f(xMin,yMin);
         return [xMin, yMin]
     }
     document.getElementById("result1").innerHTML = LocMin(x0[0][0], x0[0][1]);
-    document.getElementById("result2").innerHTML = f(x0[0][0], x0[0][1]);
 
     LocMin(x0[0][0], x0[0][1]);
 
